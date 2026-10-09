@@ -1,0 +1,28 @@
+{
+  "name": "csv-keeper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local CSV to XLSX conversion that preserves identifiers.",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build && node scripts/package-source.mjs",
+    "format": "prettier --write src tests scripts index.html tsconfig.json playwright.config.ts package.json README.md THIRD_PARTY_NOTICES.md",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "tsx --test tests/core.test.ts",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "fflate": "0.8.3",
+    "papaparse": "5.7.0",
+    "write-excel-file": "4.1.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/papaparse": "5.5.2",
+    "prettier": "3.9.9",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "6.4.3"
+  }
+}
